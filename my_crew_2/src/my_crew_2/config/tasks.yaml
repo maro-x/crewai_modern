@@ -1,0 +1,41 @@
+input_task:
+  description: >
+    Receive the topic from the user and prepare the context
+    for the workflow.
+  expected_output: >
+    A clearly defined topic context for further processing.
+  agent: input_agent
+
+keyword_task:
+  description: >
+    Generate a list of keywords related to the given topic.
+    Ensure the keywords are concise and relevant.
+  expected_output: >
+    A validated list of 5 to 10 keywords related to the topic.
+  agent: keyword_agent
+
+story_task:
+  description: >
+    Write a structured article or story based on the provided keywords.
+  expected_output: >
+    A 300 word article or story structured in sections.
+  agent: story_agent
+
+evaluation_task:
+  description: >
+    Evaluate the generated story for:
+      - Quality
+      - Accuracy
+      - Structure
+      - Readability
+  expected_output: >
+    A summarized evaluation of the story including strengths and weaknesses.
+  agent: evaluation_agent
+
+report_task:
+  description: >
+    Combine outputs from all previous agents and produce
+    a final performance and results report.
+  expected_output: >
+   A concise report under 300 words
+  agent: reporting_agent
