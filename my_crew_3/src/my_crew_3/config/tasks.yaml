@@ -1,0 +1,24 @@
+input_task:
+  description: Prepare context for topic {topic}
+  expected_output: structured context
+  agent: input_agent
+
+keyword_task:
+  description: Extract keywords
+  expected_output: list of keywords
+  agent: keyword_agent
+
+story_task:
+  description: Write article
+  expected_output: structured article
+  agent: story_agent
+
+evaluation_task:
+  description: Evaluate article
+  expected_output: evaluation report
+  agent: evaluation_agent
+
+report_task:
+  description: Generate final report
+  expected_output: full report
+  agent: report_agent
